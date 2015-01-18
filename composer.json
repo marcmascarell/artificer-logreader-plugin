@@ -1,6 +1,13 @@
 {
     "name": "mascame/artificer-logreader-plugin",
-    "description": "",
+    "description": "Log Reader plugin. Let you see and search logs.",
+    "homepage": "https://github.com/marcmascarell/artificer-logreader-plugin",
+    "keywords": [
+        "laravel",
+        "artificer",
+        "plugin",
+        "log"
+    ],
     "authors": [
         {
             "name": "Marc Mascarell",
