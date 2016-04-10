@@ -21,7 +21,6 @@ class ArtificerLogreaderPluginServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package($this->package);
 	}
 
 	/**
@@ -34,10 +33,12 @@ class ArtificerLogreaderPluginServiceProvider extends ServiceProvider {
 		$package = $this->package;
 
 		\App::bind($this->package, function () use ($package) {
-			return new LogReaderPlugin($package);
+			return new LogReaderPlugin();
 		});
 
-		new PluginManager($this->package);
+		\Mascame\Artificer\Artificer::pluginManager()->add('logreader-plugin', function() use ($package) {
+			return app($package);
+		});
 	}
 
 	/**

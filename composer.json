@@ -15,15 +15,10 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
-        "rap2hpoutre/laravel-log-viewer": "0.1.*"
+        "rap2hpoutre/laravel-log-viewer": "0.*"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
-        "psr-0": {
+        "psr-4": {
             "Mascame\\ArtificerLogreaderPlugin\\": "src/"
         }
     },
