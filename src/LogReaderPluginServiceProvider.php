@@ -1,9 +1,10 @@
-<?php namespace Mascame\ArtificerLogreaderPlugin;
+<?php namespace Mascame\Artificer;
 
 use Illuminate\Support\ServiceProvider;
-use Mascame\Artificer\Plugin\PluginManager;
+use Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider;
 
-class ArtificerLogreaderPluginServiceProvider extends ServiceProvider {
+
+class LogReaderPluginServiceProvider extends ServiceProvider {
 
 	public $package = 'mascame/artificer-logreader-plugin';
 
@@ -32,13 +33,15 @@ class ArtificerLogreaderPluginServiceProvider extends ServiceProvider {
 	{
 		$package = $this->package;
 
-		\App::bind($this->package, function () use ($package) {
+		\App::bind($this->package, function () {
 			return new LogReaderPlugin();
 		});
 
 		\Mascame\Artificer\Artificer::pluginManager()->add('logreader-plugin', function() use ($package) {
 			return app($package);
 		});
+		
+		Artificer::addServiceProvider(LaravelLogViewerServiceProvider::class);
 	}
 
 	/**

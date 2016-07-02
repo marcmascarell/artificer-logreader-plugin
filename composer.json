@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mascame\\ArtificerLogreaderPlugin\\": "src/"
+            "Mascame\\Artificer\\": "src/"
         }
     },
     "minimum-stability": "stable"

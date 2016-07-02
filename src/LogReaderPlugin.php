@@ -1,4 +1,4 @@
-<?php namespace Mascame\ArtificerLogreaderPlugin;
+<?php namespace Mascame\Artificer;
 
 use Mascame\Artificer\Plugin\AbstractPlugin;
 
@@ -16,7 +16,15 @@ class LogReaderPlugin extends AbstractPlugin {
 	 * can inject any dependency you need
 	 */
 	public function __construct() {
-		
+		Artificer::addMenu([
+			'route'  => 'admin.plugin.logreader',
+			'title' => 'Log Reader',
+			'icon'  => '<i class="fa fa-book"></i>',
+			'permissions' => [
+				'admin',
+				'user'
+			]
+		]);
 	}
 
 	public function getRoutes() {
