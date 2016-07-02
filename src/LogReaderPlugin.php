@@ -16,15 +16,7 @@ class LogReaderPlugin extends AbstractPlugin {
 	 * can inject any dependency you need
 	 */
 	public function __construct() {
-		Artificer::addMenu([
-			'route'  => 'admin.plugin.logreader',
-			'title' => 'Log Reader',
-			'icon'  => '<i class="fa fa-book"></i>',
-			'permissions' => [
-				'admin',
-				'user'
-			]
-		]);
+
 	}
 
 	public function getRoutes() {
@@ -32,6 +24,20 @@ class LogReaderPlugin extends AbstractPlugin {
 			'as' => 'admin.plugin.logreader',
 			'uses' => '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index'
 		]);
+	}
+
+	public function getMenu() {
+		return [
+			[
+				'route'  => 'admin.plugin.logreader',
+				'title' => 'Log Reader',
+				'icon'  => '<i class="fa fa-book"></i>',
+				'permissions' => [
+					'admin',
+					'user'
+				]
+			]
+		];
 	}
 
 	/**
