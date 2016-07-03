@@ -6,6 +6,8 @@ use Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider;
 
 class LogReaderPluginServiceProvider extends ServiceProvider {
 
+	use ServiceProviderLoader;
+
 	public $package = 'mascame/artificer-logreader-plugin';
 
 	/**
@@ -40,8 +42,10 @@ class LogReaderPluginServiceProvider extends ServiceProvider {
 		\Mascame\Artificer\Artificer::pluginManager()->add('logreader-plugin', function() use ($package) {
 			return app($package);
 		});
-		
-		Artificer::addServiceProvider(LaravelLogViewerServiceProvider::class);
+
+		$this->providers([
+			LaravelLogViewerServiceProvider::class
+		]);
 	}
 
 	/**
