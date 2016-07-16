@@ -5,7 +5,6 @@ use Mascame\Artificer\Plugin\AbstractPlugin;
 
 class LogReaderPlugin extends AbstractPlugin {
 
-	public $version = '1.0';
 	public $name = 'Log Reader';
 	public $description = 'The best (IMO) Log Viewer for Laravel 5 right in the admin interface';
 	public $author = 'Marc Mascarell';

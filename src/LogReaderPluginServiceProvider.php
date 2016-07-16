@@ -39,7 +39,7 @@ class LogReaderPluginServiceProvider extends ServiceProvider {
 			return new LogReaderPlugin();
 		});
 
-		\Mascame\Artificer\Artificer::pluginManager()->add('logreader-plugin', function() use ($package) {
+		\Mascame\Artificer\Artificer::pluginManager()->add('mascame/artificer-logreader-plugin', function() use ($package) {
 			return app($package);
 		});
 
