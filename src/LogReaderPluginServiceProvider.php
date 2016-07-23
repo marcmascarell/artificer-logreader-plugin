@@ -33,15 +33,9 @@ class LogReaderPluginServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$package = $this->package;
+		\App::bind(LogReaderPlugin::class);
 
-		\App::bind($this->package, function () {
-			return new LogReaderPlugin();
-		});
-
-		\Mascame\Artificer\Artificer::pluginManager()->add('mascame/artificer-logreader-plugin', function() use ($package) {
-			return app($package);
-		});
+		\Mascame\Artificer\Artificer::pluginManager()->add($this->package, LogReaderPlugin::class);
 
 		$this->providers([
 			LaravelLogViewerServiceProvider::class
