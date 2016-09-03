@@ -2,7 +2,7 @@
 
 @section('content-header')
     <h1>
-        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Log Viewer
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Log Reader
         <small>by Rap2h</small>
     </h1>
 
