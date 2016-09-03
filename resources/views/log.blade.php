@@ -20,27 +20,32 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
 
     <style>
-        .stack {
+        #log-reader-plugin .stack {
             font-size: 0.85em;
         }
-        .date {
+        #log-reader-plugin .date {
             min-width: 75px;
         }
-        .text {
+        #log-reader-plugin .text {
             word-break: break-all;
         }
-        a.llv-active {
+        #log-reader-plugin a.llv-active {
             z-index: 2;
             background-color: #f5f5f5;
             border-color: #d2cccc;
         }
 
-        .list-group {
+        #log-reader-plugin .list-group {
             display: inline-block;
         }
+
+        #log-reader-plugin .list-group-item {
+            padding: 5px 10px;
+        }
+
     </style>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="log-reader-plugin">
         <div class="row">
             <div class="col-sm-12">
                 <div class="list-group">
