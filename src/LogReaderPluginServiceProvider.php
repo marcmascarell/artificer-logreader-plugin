@@ -1,7 +1,5 @@
 <?php namespace Mascame\Artificer;
 
-use Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider;
-
 
 class LogReaderPluginServiceProvider extends ArtificerExtensionServiceProvider {
 
@@ -16,13 +14,7 @@ class LogReaderPluginServiceProvider extends ArtificerExtensionServiceProvider {
 	 */
 	public function register()
 	{
-		\App::bind(LogReaderPlugin::class);
-
         $this->addPlugin(LogReaderPlugin::class);
-
-		$this->providers([
-			LaravelLogViewerServiceProvider::class
-		]);
 	}
 
 }

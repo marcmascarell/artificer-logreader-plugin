@@ -1,7 +1,7 @@
 Artificer Plugin: Log Reader 
 ===========================
 
-Log Reader plugin for Artificer
+Log Reader plugin for Artificer based on rap2hpoutre's [plugin](https://github.com/rap2hpoutre/laravel-log-viewer).
 
 Installation
 --------------
