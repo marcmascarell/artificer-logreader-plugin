@@ -7,18 +7,14 @@ use Mascame\Artificer\Plugin\AbstractPlugin;
 class LogReaderPlugin extends AbstractPlugin {
 
 	public $name = 'Log Reader';
+
 	public $description = 'The best (IMO) Log Viewer for Laravel 5 right in the admin interface';
+
 	public $author = 'Marc Mascarell (Credit: Rap2hpoutre)';
+
 	public $thumbnail = 'https://cloud.githubusercontent.com/assets/1575946/5243642/8a00b83a-7946-11e4-8bad-5c705f328bcc.png'; // url
+
 	public $slug = 'log-reader-plugin';
-
-	/**
-	 * Artificer does not know about your constructor so you
-	 * can inject any dependency you need
-	 */
-	public function __construct() {
-
-	}
 
 	public function getRoutes() {
 		\Route::get('logs', [
@@ -32,11 +28,7 @@ class LogReaderPlugin extends AbstractPlugin {
 			[
 				'route'  => 'admin.plugin.logreader',
 				'title' => 'Log Reader',
-				'icon'  => '<i class="fa fa-book"></i>',
-				'permissions' => [
-					'admin',
-					'user'
-				]
+				'icon'  => '<i class="fa fa-book"></i>'
 			]
 		];
 	}
@@ -59,20 +51,4 @@ class LogReaderPlugin extends AbstractPlugin {
 	public function boot()
 	{
 	}
-
-	/**
-	 * This will be called when plugin is installed
-	 */
-	public function install() {
-		// Maybe some table creation
-	}
-
-	/**
-	 * This will be called when plugin is uninstalled
-	 */
-	public function uninstall() {
-		// Maybe some table drop or cleanup
-	}
-
-
 }
