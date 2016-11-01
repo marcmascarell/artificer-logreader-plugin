@@ -1,20 +1,20 @@
-<?php namespace Mascame\Artificer;
+<?php
 
+namespace Mascame\Artificer;
 
-class LogReaderPluginServiceProvider extends ArtificerExtensionServiceProvider {
+class LogReaderPluginServiceProvider extends ArtificerExtensionServiceProvider
+{
+    use ServiceProviderLoader;
 
-	use ServiceProviderLoader;
+    public $package = 'mascame/artificer-logreader-plugin';
 
-	public $package = 'mascame/artificer-logreader-plugin';
-
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
         $this->addPlugin(LogReaderPlugin::class);
-	}
-
+    }
 }
