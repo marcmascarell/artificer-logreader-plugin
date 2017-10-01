@@ -2,12 +2,12 @@
 
 namespace Mascame\Artificer;
 
-use Mascame\Artificer\Controllers\BaseController;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Response;
+use Mascame\Artificer\Controllers\BaseController;
 use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 
 class LogController extends BaseController
