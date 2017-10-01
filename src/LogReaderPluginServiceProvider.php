@@ -6,7 +6,7 @@ class LogReaderPluginServiceProvider extends ArtificerExtensionServiceProvider
 {
     use ServiceProviderLoader;
 
-    public $package = 'mascame/artificer-logreader-plugin';
+    protected $package = 'mascame/artificer-logreader-plugin';
 
     /**
      * Register the service provider.
