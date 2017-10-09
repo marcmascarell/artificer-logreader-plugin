@@ -2,8 +2,8 @@
 
 namespace Mascame\Artificer;
 
-use Mascame\Artificer\Extension\ResourceCollector;
 use Mascame\Artificer\Plugin\AbstractPlugin;
+use Mascame\Artificer\Extension\ResourceCollector;
 
 class LogReaderPlugin extends AbstractPlugin
 {
@@ -49,7 +49,7 @@ class LogReaderPlugin extends AbstractPlugin
         $collector->loadViewsFrom(__DIR__.'/../resources/views', $this->slug);
 
         $collector->publishes([
-            __DIR__.'/../public' => $this->getAssetsPath()
+            __DIR__.'/../public' => $this->getAssetsPath(),
         ]);
 
         return $collector;
