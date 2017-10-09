@@ -2,11 +2,14 @@
 
 namespace Mascame\Artificer;
 
+use Mascame\Artificer\Assets\AssetsManagerInterface;
 use Mascame\Artificer\Extension\ResourceCollector;
 use Mascame\Artificer\Plugin\AbstractPlugin;
 
 class LogReaderPlugin extends AbstractPlugin
 {
+    use AutoPublishable;
+
     public $name = 'Log Reader';
 
     public $description = 'The best (IMO) Log Viewer for Laravel 5 right in the admin interface';
@@ -46,7 +49,29 @@ class LogReaderPlugin extends AbstractPlugin
     {
         $collector->loadViewsFrom(__DIR__.'/../resources/views', $this->slug);
 
+        $collector->publishes([
+            __DIR__.'/../public' => $this->getAssetsPath()
+        ]);
+
         return $collector;
+    }
+
+    /**
+     * @param AssetsManagerInterface $manager
+     */
+    public function assets(AssetsManagerInterface $manager)
+    {
+        $manager->add([
+            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css',
+            'https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css',
+            'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
+            'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
+            'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+            'https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js',
+            'https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js',
+            $this->getAssetsPath('css/main.css'),
+            $this->getAssetsPath('js/main.js'),
+        ]);
     }
 
     /**
