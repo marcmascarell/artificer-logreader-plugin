@@ -2,9 +2,9 @@
 
 namespace Mascame\Artificer;
 
-use Mascame\Artificer\Assets\AssetsManagerInterface;
-use Mascame\Artificer\Extension\ResourceCollector;
 use Mascame\Artificer\Plugin\AbstractPlugin;
+use Mascame\Artificer\Extension\ResourceCollector;
+use Mascame\Artificer\Assets\AssetsManagerInterface;
 
 class LogReaderPlugin extends AbstractPlugin
 {
