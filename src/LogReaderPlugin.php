@@ -50,7 +50,7 @@ class LogReaderPlugin extends AbstractPlugin
         $collector->loadViewsFrom(__DIR__.'/../resources/views', $this->slug);
 
         $collector->publishes([
-            __DIR__.'/../public' => $this->getAssetsPath()
+            __DIR__.'/../public' => $this->getAssetsPath(),
         ]);
 
         return $collector;
