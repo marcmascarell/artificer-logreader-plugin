@@ -34,7 +34,7 @@ class LogReaderPlugin extends AbstractPlugin
             [
                 'route'  => 'admin.plugin.logreader',
                 'title' => 'Log Reader',
-                'icon'  => '<i class="fa fa-book"></i>',
+                'icon'  => 'fa fa-book',
             ],
         ];
     }
