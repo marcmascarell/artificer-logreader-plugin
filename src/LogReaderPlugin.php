@@ -66,7 +66,6 @@ class LogReaderPlugin extends AbstractPlugin
             'https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css',
             'https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js',
             'https://oss.maxcdn.com/respond/1.4.2/respond.min.js',
-            'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
             'https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js',
             'https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js',
             $this->getAssetsPath('css/main.css'),
